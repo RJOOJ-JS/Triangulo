@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Triangulação</title>
+    <title>Calculos de Triângulo</title>
 
     <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
     <div id="container">
         <header>
-            <h1>Operações de Triângulos</h1>
+            <h1>Alguns Calculos Triangulo Reto</h1>
             <div class="selects">
                 <div class="operas">
                     <span>Tipo de Operação: </span> 
@@ -31,7 +31,7 @@
                 </div>
                 
     
-                <div class="de" onchange="update()">
+                <div class="de">
                      <span>De:</span> 
                     <select id="operar">
                      <option value="beta">
@@ -54,29 +54,20 @@
                 <img src="./img/triangulo.svg" alt="triangulo">
             </div>
             <div id="entradas">
-                <div class = "inputs angleInputs">
-                    <label>
-                        <span>Valor de Beta(&beta;)</span>
-                        <input type =  'number' name="beta" id="beta" oninput="calculo()">
-                    </label>
-                    <label>
-                        <span>Valor de Alpha(&alpha;)</span>
-                        <input type =  'number' name="alfa" id="alfa" oninput="calculo()">
-                    </label>
-                    <label>
-                        <span>Valor de Hipotenusa</span>
-                        <input type =  'number' name="hipotenusa" id="hipo" oninput="calculo()">
-                    </label>
-                </div>
-                <div class = "inputs sideInputs hidde">
+                <div class = "inputs sideInputs">
                     <label>
                         <span>lado esquerdo(a)</span>
-                        <input type =  'number' name="a" id="a" oninput="calculo()">
+                        <input type =  'number' name="a" id="a">
                     </label>
                     <label>
                         <span>lado de baixo(c)</span>
-                        <input type =  'number' name="c" id="c" oninput="calculo()">
+                        <input type =  'number' name="c" id="c">
                     </label>
+                    <label class="hipo-label">
+                        <span>Hipotenusa</span>
+                        <input type =  'number' name="h" id="h">
+                    </label>
+                    <button id = 'calc' onclick="calculo()">Calcular</button>
                 </div>
                  <div id="out">
                     <div id="res">

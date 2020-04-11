@@ -74,6 +74,9 @@ header h1{
 ul{
     list-style-type: none;
 }
+ul.res{
+    padding: 0;
+}
 footer{
     display: flex;
     margin-top: 64px;

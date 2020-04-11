@@ -10,25 +10,32 @@ const elements = {
     hipo: document.querySelector('input#hipo'),
 
     sides: document.querySelector('div.sideInputs'),
-    angles: document.querySelector('div.angleInputs'),
+
 
     a: document.querySelector('input#a'),
-    b: document.querySelector('input#b'),
+    h: document.querySelector('input#h'),
     c: document.querySelector('input#c'),
+
+    hipoLabel: document.querySelector('label.hipo-label'),
+    resList: document.querySelector('ul.res')
     
 }
+
+const results = []
+
 function update()
 {
     if(elements.opTypes.value == 'hipo')
     {
         elements.de.classList.add('hidde')
-        elements.angles.classList.add('hidde')
+        elements.hipoLabel.classList.add('hidde')
         elements.sides.classList.remove('hidde')
+        
 
     } else{
         elements.de.classList.remove('hidde')
-        elements.sides.classList.add('hidde')
-        elements.angles.classList.remove('hidde')
+        elements.hipoLabel.classList.remove('hidde')
+
 
     }
 }
@@ -44,7 +51,9 @@ function calculo()
     if(elements.opTypes.value == 'hipo')
     {
         //pegar valor dos lados
-        res.hipo = Math.sqrt((Math.pow(Number(elements.a.value), 2)+ Math.pow(Number(elements.c.value))))
+        res.hipo = Math.sqrt(Math.pow(Number(elements.a.value), 2) + Math.pow(Number(elements.c.value), 2))
+        results.push(res.hipo)
+        resAdd('Hipotenusa')
         console.log(res.hipo)
         //fazer calculo
     }
@@ -64,4 +73,18 @@ function calculo()
         //pegar valor dos angulos
         //calcular coscenos
     }
+}
+
+function resAdd(tipo)
+{
+    
+    for(result in results)
+    {
+        let newResult = document.createElement('li')
+        newResult.innerHTML = `${tipo}: ${results[result]}`
+
+
+        elements.resList.appendChild(newResult)
+    }
+    
 }
