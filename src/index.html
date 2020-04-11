@@ -14,7 +14,7 @@
             <div class="selects">
                 <div class="operas">
                     <span>Tipo de Operação: </span> 
-                    <select id="operacoes">
+                    <select id="operacoes" onchange="update()">
                     <option value="sen">
                         Seno
                     </option>
@@ -31,7 +31,7 @@
                 </div>
                 
     
-                <div class="de">
+                <div class="de" onchange="update()">
                      <span>De:</span> 
                     <select id="operar">
                      <option value="beta">
@@ -54,24 +54,40 @@
                 <img src="./img/triangulo.svg" alt="triangulo">
             </div>
 
-            <div class = "inputs">
+            <div class = "inputs angleInputs">
                 <label>
                     <span>Valor de Beta(&beta;)</span>
-                    <input type =  'number' name="beta" class="beta">
+                    <input type =  'number' name="beta" id="beta">
                 </label>
                 <label>
                     <span>Valor de Alpha(&alpha;)</span>
-                    <input type =  'number' name="alfa" class="alfa">
+                    <input type =  'number' name="alfa" id="alfa">
                 </label>
                 <label>
                     <span>Valor de Hipotenusa</span>
-                    <input type =  'number' name="hipotenusa" class="hipo">
+                    <input type =  'number' name="hipotenusa" id="hipo" oninput="">
+                </label>
+            </div>
+            <div class = "inputs sideInputs hidde">
+                <label>
+                    <span>lado esquerdo(a)</span>
+                    <input type =  'number' name="a" id="a">
+                </label>
+                <label>
+                    <span>lado direito(b)</span>
+                    <input type =  'number' name="b" id="b">
+                </label>
+                <label>
+                    <span>lado de baixo(c)</span>
+                    <input type =  'number' name="c" id="c" oninput="">
                 </label>
             </div>
         </div>
         <footer>
-            Merdas e Associados 2020
+            <a href="https://github.com/RaulCesar-programming" target="blank">&copy; Merdas e Associados 2020</a>
         </footer>
     </div>
+
+    <script src="./js/script.js"></script>
 </body>
 </html>

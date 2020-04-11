@@ -5,7 +5,10 @@ body{
     margin: 0;
 
 }
-
+a{
+    text-decoration: none;
+    color: white;
+}
 header{
     text-align: center;
     margin: 0;
@@ -55,7 +58,18 @@ header h1{
 
 
 footer{
-   margin-top: 20px;
+    display: flex;
+    margin-top: 64px;
     text-align: center;
-   
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+    background-color: rgb(0, 0, 0);
+    color: white;
+    font-weight: bold;
+}
+
+.hidde{
+    display: none;
+    visibility: hidden;
 }
