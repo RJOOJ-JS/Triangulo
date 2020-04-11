@@ -39,6 +39,7 @@ function update()
     } else if(elements.opTypes.value == 'tg'){
         elements.hipoLabel.classList.add('hidde')
         elements.de.classList.remove('hidde')
+        elements.h.value = 10
     }
     else{
         elements.de.classList.remove('hidde')
@@ -129,7 +130,7 @@ function calculo()
 
         }
 
-        res.sen = op/hip
+        res.sen = (op/hip).toFixed(2)
         results.push(`Seno${qu}: ${res.sen}`)
         resAdd()
         //calcular seno
@@ -153,7 +154,7 @@ function calculo()
                 qu = '(alfa)'
         }
 
-        res.cos = adj/hip
+        res.cos = (adj/hip).toFixed(2)
         results.push(`Cosseno${qu}: ${res.cos}`)
         resAdd()
     }
@@ -179,7 +180,7 @@ function calculo()
  
          }
  
-         res.tg = op/adj
+         res.tg = (op/adj).toFixed(2)
          results.push(`Tangente${qu}: ${res.tg}`)
          resAdd()
          //calcular seno
