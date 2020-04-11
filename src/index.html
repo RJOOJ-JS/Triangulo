@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Triangulação</title>
+
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <div id="container">
+        <header>
+            <h1>Operações de Triângulos</h1>
+            <div class="selects">
+                <div class="operas">
+                    <span>Tipo de Operação: </span> 
+                    <select id="operacoes">
+                    <option value="sen">
+                        Seno
+                    </option>
+                    <option value="cos">
+                        Cosceno
+                    </option>
+                    <option value="tg">
+                        Tangente
+                    </option>
+                    <option value="hipo">
+                        Hipotenusa
+                    </option>
+                </select>
+                </div>
+                
+    
+                <div class="de">
+                     <span>De:</span> 
+                    <select id="operar">
+                     <option value="beta">
+                         Beta(&beta;)
+                     </option>
+                     <option value="cos">
+                         Alfa(&alpha;)
+                     </option>
+                     <option value="tg">
+                         Tangente
+                     </option>
+                 </select>
+                </div>
+            </div>
+           
+           
+        </header>
+        <div class="content">
+            <div id="tri">
+                <img src="./img/triangulo.svg" alt="triangulo">
+            </div>
+
+            <div class = "inputs">
+                <label>
+                    <span>Valor de Beta(&beta;)</span>
+                    <input type =  'number' name="beta" class="beta">
+                </label>
+                <label>
+                    <span>Valor de Alpha(&alpha;)</span>
+                    <input type =  'number' name="alfa" class="alfa">
+                </label>
+                <label>
+                    <span>Valor de Hipotenusa</span>
+                    <input type =  'number' name="hipotenusa" class="hipo">
+                </label>
+            </div>
+        </div>
+        <footer>
+            Merdas e Associados 2020
+        </footer>
+    </div>
+</body>
+</html>
