@@ -52,15 +52,36 @@ function calculo()
     {
         //pegar valor dos lados
         res.hipo = Math.sqrt(Math.pow(Number(elements.a.value), 2) + Math.pow(Number(elements.c.value), 2))
-        results.push(res.hipo)
-        resAdd('Hipotenusa')
+        results.push(`Hipotenusa: ${res.hipo}`)
+        resAdd()
         console.log(res.hipo)
         //fazer calculo
     }
 
     if(elements.opTypes.value == 'sen')
     {
-        //pegar valor dos angulos
+        //pegar valor dos lados
+        let ang = elements.opOper.value
+        let op = null
+        let adj = null
+        let hip = elements.h.value
+        let qu = ''
+        switch(ang)
+        {
+            case 'beta':
+                op = Number(elements.a.value) 
+                adj = Number(elements.c.value)
+                qu = '(beta)'
+            break;
+            case 'alfa':
+                op = Number(elements.c.value)
+                adj = Number(elements.a.value)
+                qu = '(alfa)'
+        }
+
+        res.sen = op/hip
+        results.push(`Seno${qu}: ${res.sen}`)
+        resAdd('Seno')
         //calcular seno
     }
     if(elements.opTypes.value == 'cos')
@@ -75,13 +96,13 @@ function calculo()
     }
 }
 
-function resAdd(tipo)
+function resAdd()
 {
-    
+    elements.resList.innerHTML = ''
     for(result in results)
     {
         let newResult = document.createElement('li')
-        newResult.innerHTML = `${tipo}: ${results[result]}`
+        newResult.innerHTML = `${results[result]}`
 
 
         elements.resList.appendChild(newResult)
