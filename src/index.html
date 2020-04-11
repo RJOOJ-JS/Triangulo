@@ -19,7 +19,7 @@
                         Seno
                     </option>
                     <option value="cos">
-                        Cosceno
+                        Cosseno
                     </option>
                     <option value="tg">
                         Tangente
@@ -33,7 +33,7 @@
     
                 <div class="de">
                      <span>De:</span> 
-                    <select id="operar">
+                    <select id="operar" onchange="update()">
                      <option value="beta">
                          Beta(&beta;)
                      </option>
@@ -54,15 +54,15 @@
             <div id="entradas">
                 <div class = "inputs sideInputs">
                     <label>
-                        <span>lado esquerdo(a)</span>
+                        <span id = 'inputTitA'>lado esquerdo(a)</span>
                         <input type =  'number' name="a" id="a">
                     </label>
                     <label>
-                        <span>lado de baixo(c)</span>
+                        <span id = 'inputTitB'>lado de baixo(c)</span>
                         <input type =  'number' name="c" id="c">
                     </label>
                     <label class="hipo-label">
-                        <span>Hipotenusa</span>
+                        <span id = 'inputTitC'>Hipotenusa</span>
                         <input type =  'number' name="h" id="h">
                     </label>
                     <button id = 'calc' onclick="calculo()">Calcular</button>

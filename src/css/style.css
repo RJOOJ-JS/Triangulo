@@ -60,16 +60,36 @@ header h1{
 }
 #out{
     border-radius: 20px;
-    background-color: thistle;
+    background-color: rgb(83, 83, 83);
     padding: 10px;
 }
 #res{
-    background-color: rgb(243, 231, 243);
+    background-color: rgb(199, 199, 199);
     padding: 7px;
     border-radius: 14px;
     height: 90%;
     width: 90%;
     font-size: 15px;
+}
+#calc{
+    margin: 18px;
+    margin-left: 0;
+
+    padding: 10px;
+    cursor: pointer;
+
+    color: white;
+    
+    background-color: rgb(27, 27, 27);
+    border: none;
+    transition: 0.5s;
+    border-radius: 16vh;
+
+    outline: none;
+}
+#calc:hover{
+    background-color: rgb(65, 65, 65);
+    transform: scale(1.2);
 }
 ul{
     list-style-type: none;
