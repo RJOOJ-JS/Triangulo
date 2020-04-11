@@ -53,35 +53,43 @@
             <div id="tri">
                 <img src="./img/triangulo.svg" alt="triangulo">
             </div>
+            <div id="entradas">
+                <div class = "inputs angleInputs">
+                    <label>
+                        <span>Valor de Beta(&beta;)</span>
+                        <input type =  'number' name="beta" id="beta" oninput="calculo()">
+                    </label>
+                    <label>
+                        <span>Valor de Alpha(&alpha;)</span>
+                        <input type =  'number' name="alfa" id="alfa" oninput="calculo()">
+                    </label>
+                    <label>
+                        <span>Valor de Hipotenusa</span>
+                        <input type =  'number' name="hipotenusa" id="hipo" oninput="calculo()">
+                    </label>
+                </div>
+                <div class = "inputs sideInputs hidde">
+                    <label>
+                        <span>lado esquerdo(a)</span>
+                        <input type =  'number' name="a" id="a" oninput="calculo()">
+                    </label>
+                    <label>
+                        <span>lado de baixo(c)</span>
+                        <input type =  'number' name="c" id="c" oninput="calculo()">
+                    </label>
+                </div>
+                 <div id="out">
+                    <div id="res">
+                        <h4>RESULTADO:</h4>
+                        <ul class="res">
 
-            <div class = "inputs angleInputs">
-                <label>
-                    <span>Valor de Beta(&beta;)</span>
-                    <input type =  'number' name="beta" id="beta">
-                </label>
-                <label>
-                    <span>Valor de Alpha(&alpha;)</span>
-                    <input type =  'number' name="alfa" id="alfa">
-                </label>
-                <label>
-                    <span>Valor de Hipotenusa</span>
-                    <input type =  'number' name="hipotenusa" id="hipo" oninput="">
-                </label>
+                        </ul>
+                    </div>
             </div>
-            <div class = "inputs sideInputs hidde">
-                <label>
-                    <span>lado esquerdo(a)</span>
-                    <input type =  'number' name="a" id="a">
-                </label>
-                <label>
-                    <span>lado direito(b)</span>
-                    <input type =  'number' name="b" id="b">
-                </label>
-                <label>
-                    <span>lado de baixo(c)</span>
-                    <input type =  'number' name="c" id="c" oninput="">
-                </label>
+
             </div>
+           
+            
         </div>
         <footer>
             <a href="https://github.com/RaulCesar-programming" target="blank">&copy; Merdas e Associados 2020</a>
