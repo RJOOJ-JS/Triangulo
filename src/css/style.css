@@ -29,6 +29,9 @@ header h1{
 .selects select{
     margin: 12px;
 }
+select{
+    transition: 1s;
+}
 
 #tri{
     display: flex;
