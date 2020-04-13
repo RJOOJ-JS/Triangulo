@@ -130,7 +130,11 @@ footer{
     color: white;
     font-weight: bold;
 }
-
+footer a{
+    font-style: italic;
+    font-weight: 200;
+    color: grey;
+}
 .hidde{
     display: none;
     visibility: hidden;
