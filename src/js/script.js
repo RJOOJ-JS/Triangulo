@@ -23,9 +23,10 @@ const elements = {
     titB: document.querySelector('span#inputTitB'),
     titC: document.querySelector('span#inputTitC'),
     
+    clearBtn: document.querySelector('button#clear')
 }
 
-const results = []
+let results = []
 
 function update()
 {
@@ -34,7 +35,7 @@ function update()
         elements.de.classList.add('hidde')
         elements.hipoLabel.classList.add('hidde')
         elements.sides.classList.remove('hidde')
-        
+        elements.h.value = 10
 
     } else if(elements.opTypes.value == 'tg'){
         elements.hipoLabel.classList.add('hidde')
@@ -203,3 +204,10 @@ function resAdd()
     }
     
 }
+
+elements.clearBtn.addEventListener('click', ()=>{
+    results = []
+    resAdd()
+})
+
+ 
